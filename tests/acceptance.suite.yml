@@ -1,0 +1,41 @@
+# Codeception Test Suite Configuration
+
+# suite for acceptance tests.
+# perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - AcceptanceHelper
+    config:
+        WebDriver:
+            url: 'http://chm-QA30-cps.chelmer.co.nz:8080/fusion'
+            host: 'hub.browserstack.com'
+            port: 80
+            browser: 'firefox'
+            capabilities:
+             'browserstack.user': 'kanavchadha1'
+             'browserstack.key' : 'vsJCA7qRsikP7cxkNFe8'
+             'browserVersion': '35.0'
+             'browserstack.debug': 'true'
+
+  
+env: 
+    url1: 
+        modules: 
+            config: 
+                WebDriver: 
+                    url: 'http://chm-QA30-cps.chelmer.co.nz:8080/fusion' 
+                    browser: 'firefox' 
+                    
+                    
+                    
+    url2: 
+        modules: 
+            config:
+                WebDriver: 
+                    url: 'http://chm-QA30-cps.chelmer.co.nz:8080/ws' 
+                    browser: 'firefox'
+                    

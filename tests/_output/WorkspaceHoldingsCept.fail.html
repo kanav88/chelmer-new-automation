@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug8GUFVTGwAAUlhSAAg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;&amp;t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f&gt;d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;&amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;&amp;"function"==typeof console.log&amp;&amp;(i.console=!0,-1!==n.indexOf("dev")&amp;&amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;&amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;&amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;&amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;&amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&amp;&amp;(t(1),t(2),"addEventListener"in window&amp;&amp;t(3),window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)&amp;&amp;t(4),s=!0)}i.on("fn-start",function(){s&amp;&amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;&amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;&amp;!this.thrown&amp;&amp;c&gt;0&amp;&amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&amp;&amp;window.performance.timing&amp;&amp;window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&amp;&amp;(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&amp;&amp;r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&amp;&amp;(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;&amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;&amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;&amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;&amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;&amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;&amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;&amp;(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&amp;&amp;(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;&amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;&amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;&amp;t instanceof ArrayBuffer&amp;&amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;&amp;t instanceof Blob&amp;&amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;&amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;&amp;"xpid"in NREUM.loader_config&amp;&amp;this.sameOrigin&amp;&amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;&amp;o){var f=n(o);f&amp;&amp;(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;&amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;&amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;&amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c&gt;u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;&amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;!this.xhrGuids[n]&amp;&amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;this.xhrGuids[n]&amp;&amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;&amp;("onload"===n&amp;&amp;(this.onload=!0),("load"===(t[0]&amp;&amp;t[0].type)||this.onload)&amp;&amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;&amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;&amp;o[1]&amp;&amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;&amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;&amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;&amp;e.port===n.port&amp;&amp;e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;&amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;&amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&amp;&amp;t.licenseKey&amp;&amp;t.applicationID&amp;&amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&amp;&amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;&amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;&amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&gt;o?0:o);++r&lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&amp;&amp;"function"==typeof t&amp;&amp;t.apply&amp;&amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&amp;&amp;r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c&lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&amp;&amp;(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><link href="/fusion/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<title>Client Search</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+
+<link media="screen" type="text/css" rel="stylesheet" href="/fusion/skins/murray/css/core.css" />
+<link media="print" type="text/css" rel="stylesheet" href="/fusion/skins/murray/css/corePrint.css" />
+
+<!--[if IE 6]>
+<style>
+    body {behavior: url("csshover3.htc");}
+    #menu li .drop {background:url("/fusion/images/drop.gif") no-repeat right 8px;
+</style>
+<![endif]-->
+
+<script src="/fusion/scripts/jquery.min.js" type="text/javascript"></script>
+
+<script src="/fusion/scripts/session.expiry.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    // Stops conflict with DWR and JQuery
+    var jq = jQuery.noConflict();
+    // True if main window, false if remote. Prevents remote windows from being stored as 'lastKnowGood'
+    var baseLocation = true;
+    // This is the domain used to help encode URLs in javascript functions.
+    var gContextPath = "/fusion/";
+    var gJFContextPath = "/fusion/FormHandler?";
+    // One time check now to see if ACE is enabled
+    var bAceEnabled = true;
+    var gUps = "demo";
+    // User Preference Quick Client Link. Default navigation used for click on a client
+    var gUPQCLink = "/fusion/FormHandler?Page=Holdings&amp;AID=0&amp;accountid=";
+    // User Preference Skin Theme. Default skin for UI
+    var gUPST = "/fusion/skins/murray";
+    // max number of records returned in client, contact and holdings searches; 0 if not limited
+    var gMaxSizeSearchResults = 150;
+    // The earliest a date range can be set for any reporting
+    var gMinDateRange = "01/01/2010";
+
+    var gDevRole = false;
+    
+    var gSkin = gUPST;
+    var gQueryContextPath = "/fusion/QueryManagerHandler?query=";
+
+    jq(document).ready(function() {
+
+        //on page load  or refresh
+        jq('#styled').val('');
+        jq('#styledService').val('');
+
+        // Expand Panel
+        jq("#openPanel").click(function(){
+            jq("div#panel").slideDown("slow");
+            if(jq('#styled').val() == ''){
+                jq('#styled').val('Enter your feedback here...');
+            }
+            if(jq('#styledService').val() == ''){
+                jq('#styledService').val('Send information to Service Desk here...');
+            }
+        });
+        // Collapse Panel
+        jq("#closePanel").click(function(){
+            jq("div#panel").slideUp("slow");
+            jq('#emailSuggestDesk').attr('href', '#');
+            jq('#emailServiceDesk').attr('href', '#');
+        });
+        // Switch buttons from "LSuggest &amp; Help" to "Close Panel" on click
+        jq("#toggle a").click(function () {
+            jq("#toggle a").toggle();
+        });
+        // This adds live clicking on the 'Now' of a date control to select and close
+        jq('button.ui-datepicker-current').live('click', function() {
+            jq.datepicker._curInst.input.datepicker('setDate', new Date()).datepicker('hide');
+        });
+
+        jq("#styled").click(function(){
+            if(jq('#styled').val() == 'Enter your feedback here...'){
+                jq('#styled').val('');
+            }
+        });
+        jq("#styledService").click(function(){
+            if(jq('#styledService').val() == 'Send information to Service Desk here...'){
+                jq('#styledService').val('');
+            }
+        });
+
+        // init session expiry monitor
+        initSessionMonitor('10800', '/fusion/');
+    });
+
+    function popupEmail(field, ctrl, subj, mailto) {
+        // first fire off emails and then reset the field value
+        if((field == 'styled') &amp;&amp; (jq('#styled').val() != 'Enter your feedback here...') &amp;&amp; (jq('#styled').val() != '')){
+            emailSuggest(ctrl, subj, mailto);
+            jq('#'+field).val('');
+        }else if((field == 'styledService') &amp;&amp; (jq('#styledService').val() != 'Send information to Service Desk here...') &amp;&amp; (jq('#styledService').val() != '')){
+            emailSupport(ctrl, subj, mailto);
+            jq('#'+field).val('');
+        }
+    }
+
+</script>
+
+<script type="text/javascript" src="/fusion/scripts/respond.min.js"></script>
+
+<script src="/fusion/scripts/jquery-ui.custom.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="/fusion/skins/murray/jquery-ui.custom.css" />
+<script src="/fusion/scripts/jquery.multiselect.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="/fusion/skins/jquery.multiselect.css" />
+
+<link type="text/css" rel="stylesheet" href="/fusion/skins/validationEngine.jquery.css" />
+
+<link type="text/css" rel="stylesheet" href="/fusion/skins/ui.daterangepicker.css" />
+
+<script src="/fusion/scripts/fusionMin.min.js" type="text/javascript"></script>
+<script src="/fusion/scripts/standardMin.min.js" type="text/javascript"></script>
+<script src="/fusion/scripts/navigator.js" type="text/javascript"></script>
+<script src="/fusion/scripts/extRef.js" type="text/javascript"></script>
+<script src="/fusion/scripts/linkedDoc.js" type="text/javascript"></script>
+<script src="/fusion/scripts/underscore-min.js" type="text/javascript"></script>
+
+<script src="/fusion/dwr/interface/DRUMSearchHelper.js" type="text/javascript"></script>
+<script src="/fusion/dwr/interface/ReportOptionHelper.js" type="text/javascript"></script>
+<script src="/fusion/dwr/interface/ReportRepositoryHelper.js" type="text/javascript"></script>
+<script src="/fusion/dwr/interface/TransactionHelper.js" type="text/javascript"></script>
+<script src="/fusion/dwr/interface/AssetHelper.js" type="text/javascript"></script>
+<script src="/fusion/dwr/engine.js" type="text/javascript"></script>
+<script src="/fusion/dwr/util.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var showSpinHtml = jq('&lt;div class="tab-loading" style="float:top;"&gt;').append('&lt;IMG title="Please Wait..." alt=""  src="/fusion/images/progress-16.gif"&gt;');
+    document.write('&lt;div id="loadMsg" class="loadMsg" style="position:absolute;z-index:5;top:20%;left:45%;"&gt;&lt;img onClick="hideLoadMsg();" title="Click to hide" alt="Click to hide" src="/fusion/images/progress.gif"&gt; &lt;span class="MsgInfo"&gt;Please Wait...&lt;/span&gt;&lt;/div&gt;');
+
+    
+    var bPOST = false;
+    
+    if ( ! bPOST ) {
+        writeCookie('LastKnownSafeLocation', thisLocation);
+    }
+
+    
+
+    var endDestination;
+    var endClientID;
+    var endAdditionalParam = "";
+
+    
+    function validationFollow(validClient) {
+        var defaultPage;
+        if ( validClient == 0 ) {
+            var destinationOK = false;
+            if ( endDestination ) {
+                if (endDestination == 'CD') {endDestination = '/fusion/FormHandler?Page=ContactDetailsAll&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'DB') {endDestination = '/fusion/FormHandler?Page=Dashboard&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'EQ') {endDestination = '/fusion/FormHandler?Page=ClientOrders&amp;Form=filterOrders&amp;Action=reset&amp;type=eq&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'FI') {endDestination = '/fusion/FormHandler?Page=ClientOrders&amp;Form=filterOrders&amp;Action=reset&amp;type=fi&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'PV') {endDestination = '/fusion/FormHandler?Page=Holdings&amp;AID=0&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'TV') {endDestination = '/fusion/FormHandler?Page=HoldingsTransactions&amp;AID=0&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}if (endDestination == 'PA') {endDestination = '/fusion/FormHandler?Page=PortfolioAllocation&amp;AID=0&amp;accountid=' + endClientID + endAdditionalParam;destinationOK = true;}
+            } else {
+                destinationOK = true;
+            }
+            if (destinationOK) {
+                
+                    defaultPage = 'FormHandler?Page=Holdings&amp;AID=0&amp;accountid=' + endClientID;
+                    
+
+                    if (defaultPage == "") defaultPage = '/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset&amp;emsg=' + endClientID + "&amp;emsgt=401";
+                
+                    refreshPage('',endClientID, defaultPage, endDestination,0,0);
+                
+            } else {
+                reloadPage('/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset&amp;emsg=' + endClientID + "&amp;emsgt=401");
+            }
+        } else {
+            reloadPage('/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset&amp;emsg=' + endClientID + "&amp;emsgt=" + validClient);
+        }
+    }
+
+    function refreshDefault(validClient) {
+        var defaultPage = 'FormHandler?Page=Holdings&amp;AID=0&amp;accountid=' + validClient;
+        reloadPage(defaultPage);
+    }
+
+    
+    function toggleCheckBoxesSelection(elementName, select, invert) {
+        var checkBoxes = document.getElementsByName(elementName);
+        for (var i = 0; i &lt; checkBoxes.length; i++) {
+            var nextCheck = checkBoxes[i];
+            if (invert) {
+                var valueBefore = nextCheck.checked;
+                nextCheck.checked = !valueBefore;
+            } else {
+                nextCheck.checked = select;
+            }
+        }
+    }
+
+    jq(function() {
+        jq('body').click(function(event) {
+            var id = event.target.id;
+            if ( id ) {
+                var attrID = jq("#" + id).hasClass('ComponentTool');
+                if ( attrID ) {
+                    // Do nothing..this is the menu item.
+                } else {
+                    jq(".menuToggle").hide();
+                }
+            } else {
+                jq(".menuToggle").hide();
+            }
+        });
+    });
+</script><style type="text/css" id="css-ddslick">.dd-select{ border-radius:2px; border:solid 1px #ccc; position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:7px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ font-size: 11px; border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options &gt; li:last-child &gt; .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#f6f6f6; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}? .dd-selected-text { font-weight:bold}?</style></head><body><div style="position: absolute; z-index: 5; top: 20%; left: 45%; display: none;" class="loadMsg" id="loadMsg"><img src="/fusion/images/progress.gif" alt="Click to hide" title="Click to hide" onclick="hideLoadMsg();" /> <span class="MsgInfo">Please Wait...</span></div>
+
+
+<div style="display:none" id="RepOpts"><form id="ReportOptionsHeader" action="/fusion/FormHandler?Form=ReportOptions" method="POST" name="ReportOptions"><input type="hidden" value="1" name="CCYToID" /><input type="hidden" value="" name="RefCCY" /><input type="hidden" value="NZD" name="CCYToISOCode" /><input type="hidden" value="CCYToID,RefCCY,CCYToISOCode" name="ControlList" /></form></div>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+
+<script src="/fusion/dwr/interface/OneOffSearchHelper.js" type="text/javascript"></script>
+<script src="/fusion/scripts/clientSearch.js" type="text/javascript"></script>
+<script src="/fusion/scripts/ddslick.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var selectedDestination;
+    jq(document).ready(function() {
+        
+            jq("#Name").focus();
+        
+
+        jq("#selectAdvisorGroup").multiselect({
+            noneSelectedText: "[Select an Adviser Group]",
+            selectedText: "# of # selected",
+            close:function (event, ui) {
+                var objCheck = jq("#selectAdvisorGroup").multiselect("getChecked");
+                if (objCheck.length != 0) {
+                    jq("#AllClients").prop("checked", false);
+                }
+            }
+        });
+
+        setOneOffClient();
+        standardistaTableSortingInit();
+
+        
+        dwr.util.setEscapeHtml(false);
+    });
+
+    
+
+    var ddData = [
+        
+            {
+                text: "Client Dashboard",
+                value: "DB",
+                description: "View Client Dashboard",
+                imageSrc: "/fusion/images/File.png"
+            }
+            ,
+            {
+                text: "Client Details",
+                value: "CD",
+                description: "View Client Details",
+                imageSrc: "/fusion/images/File.png"
+            }
+            ,
+            {
+                text: "Equity Orders",
+                value: "EQ",
+                description: "View Equity Orders",
+                imageSrc: "/fusion/images/File.png"
+            }
+            ,
+            {
+                text: "Fixed Interest Orders",
+                value: "FI",
+                description: "View Fixed Interest Orders",
+                imageSrc: "/fusion/images/File.png"
+            }
+            ,
+            {
+                text: "Portfolio Holdings",
+                value: "PV",
+                description: "View Portfolio Holdings",
+                imageSrc: "/fusion/images/Bookmark.png"
+            }
+            ,
+            {
+                text: "Portfolio Transactions",
+                value: "TV",
+                description: "View Portfolio Transactions",
+                imageSrc: "/fusion/images/File.png"
+            }
+            ,
+            {
+                text: "Portfolio Allocation",
+                value: "PA",
+                description: "View Portfolio Allocation",
+                imageSrc: "/fusion/images/File.png"
+            }
+            
+    ];
+
+
+    jq(function() {
+        jq('#QuickClientSelectLocation').ddslick({
+            data:ddData,
+            defaultSelectedIndex:4,
+            background: "transparent",
+            onSelected: function(data) {
+                selectedDestination = data.selectedData.value;
+                if (jq("#clientid").val() != "") {
+                    searchPageClient(selectedDestination,'demo');
+                }
+            }
+        });
+        jq(".dd-select").css('border','none');
+    });
+
+    function clientSearchHook() {
+        clientSearch(false);
+    }
+</script>
+
+
+
+<div id="toppanel">
+	<div id="panel">
+		<div class="content clearfix">
+			<div class="left">
+				<!-- Suggest Form -->
+				<form method="post" action="#" class="clearfix">
+					<textarea onblur="setbg('white')" onfocus="setbg('#e5fff3');" id="styled" name="styled-textarea">Enter your feedback here...</textarea>
+					<div class="clear"></div>
+                    <a onclick="popupEmail('styled',this,'Murray &amp; Co','feedback@chelmer.co.nz');" href="#" id="emailSuggestDesk"><img border="0" title="Send Email" alt="ServiceDesk" src="/fusion/skins/murray/images/Share.png" /></a>
+				</form>
+			</div>
+			<div class="left right">
+				<!-- ServiceDesk Form -->
+				<form method="post" action="#">
+					<textarea onblur="setbg('white')" onfocus="setbg('#e5fff3');" id="styledService" name="styled-textarea">Send information to Service Desk here...</textarea>
+					<div class="clear"></div>
+					<a onclick="popupEmail('styledService',this,'Murray &amp; Co','Chelmer');" href="#" id="emailServiceDesk"><img border="0" title="Send Email" alt="ServiceDesk" src="/fusion/skins/murray/images/MailSend.png" /></a>
+				</form>
+			</div>
+		</div>
+    </div>
+	<!-- The tab on top -->
+	<div class="tab">
+		<ul class="suggestHelp">
+			<li class="left"> </li>
+            <li>
+                    <a href="mailto:zlpfjt1a@incoming.intercom.io" class="openPanel" id="Intercom">Feedback &amp;  Help</a>
+                </li>
+            <li class="right"> </li>
+            <li class="leftSearch"> </li>
+                <li id="toggleID">
+                   <input type="text" style="vertical-align: 7px; line-height: normal" class="InputTextSM InputUpper" name="menuClientCodeTop" id="menuClientCodeTop" />
+                   <img src="/fusion/skins/murray/images/Play.png" title="Client Code" href="#" id="searchPanel" onclick="jq('#menuClientCode').val(jq('#menuClientCodeTop').val()) ; searchMenuClient('','demo');" style="padding-top : 6px; margin-bottom:3px;margin-left:-6px" />
+                </li>
+                <li class="rightSearch"> </li>
+            </ul>
+    </div>
+</div><div class="MenuBG" id="Wrapper">
+    <div id="HeaderWrapper">
+            <div id="Header"></div>
+            <div id="ClientLogo">
+                <div id="HeaderEnvironment"></div>
+            </div>
+        </div>
+        <div class="wrapper_menu" id="megamenu">
+    <ul class="menu">
+        <li><a href="/fusion/FormHandler?Page=Dashboard&amp;dbType=al"><img border="0" src="/fusion/skins/murray/images/Home.png" /></a><!-- Begin Home Item -->
+            <div class="dropdown_2columns"><!-- Begin 2 columns container -->
+                <div class="col_2">
+                    <h3>My Fusion Home</h3>
+                    <div class="col_1">
+                        <p>Logged in as: demo</p>
+                    </div>
+                    <div class="col_1">
+                        <p><a href="/fusion/logout.jsp">Log Off</a></p>
+                    </div>
+                </div>
+                <div class="col_2">
+                    <h3>Connect</h3>
+                        <div class="col_1">
+                            <ul class="simple">
+                                <li><a href="/fusion/FormHandler?Page=ExtRefSocial&amp;ExtRef=Facebook"><img border="0" src="/fusion/images/SocialMediaFacebook.png" /> Facebook</a></li>
+                                    <li><a href="/fusion/FormHandler?Page=ExtRefSocial&amp;ExtRef=LinkedIn"><img border="0" src="/fusion/images/SocialMediaLinkedIn.png" /> LinkedIn</a></li>
+                                    <li><a href="/fusion/FormHandler?Page=ExtRefSocial&amp;ExtRef=Twitter"><img border="0" src="/fusion/images/SocialMediaTwitter.png" /> Twitter</a></li>
+                                    </ul>
+                        </div>
+                        <div class="col_1">
+                            <ul class="simple">
+                                </ul>
+                        </div>
+                    </div>
+
+                <div class="col_2">
+                    <h3>About</h3>
+                    <div class="col_1">
+                        <img alt="" src="/fusion/images/logo_fusion_sml.png" />
+                    </div>
+                    <div class="col_1">
+                        <p>Version: 4.1-10682</p>
+                    </div>
+                </div>
+            </div><!-- End 2 columns container -->
+        </li><!-- End Home Item -->
+        <li><a onclick="jq('#menuClientCode').focus()" href="#"><img border="0" src="/fusion/skins/murray/images/search.png" /></a>
+                <div class="dropdown_2columns">
+                    <div class="col_1">
+                        <h3>Search</h3>
+                        <ul>
+                            <li><a href="/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset">Client</a></li>
+                            <li><a href="/fusion/FormHandler?Page=IndividualSearch&amp;Form=EntitySearch&amp;Action=reset">Contact</a></li>
+                            <li><a href="/fusion/FormHandler?Form=AssetSearch&amp;Action=reset&amp;bAssetExposureLink=false">Asset</a></li>
+                            <li><a href="/fusion/FormHandler?Page=TransactionsSearch&amp;Form=TransactionsSearch&amp;Action=reset">Transaction</a></li>
+                            <li><a href="/fusion/FormHandler?Page=ClientSearch&amp;state=load">Order</a></li>
+                                <li><a href="/fusion/FormHandler?Page=TargetClientList&amp;Form=TargetClientList&amp;Action=reset">Target Client</a></li>
+                            </ul>
+                    </div>
+                    <div class="col_1">
+                        <h3><label for="menuClientCode">Client Code</label></h3>
+                        <input type="text" class="InputTextSM InputUpper" name="menuClientCode" id="menuClientCode" />
+                        <ul>
+                            <li><a href="javascript:searchMenuClient('DB','demo');">Client Dashboard</a></li>
+                                <li><a href="javascript:searchMenuClient('CD','demo');">Client Details</a></li>
+                                <li><a href="javascript:searchMenuClient('EQ','demo');">Equity Orders</a></li>
+                                <li><a href="javascript:searchMenuClient('FI','demo');">Fixed Interest Orders</a></li>
+                                <li><a href="javascript:searchMenuClient('PV','demo');"><img border="0" src="/fusion/images/Bookmark.png" /> Portfolio Holdings</a></li>
+                                <li><a href="javascript:searchMenuClient('TV','demo');">Portfolio Transactions</a></li>
+                                <li><a href="javascript:searchMenuClient('PA','demo');">Portfolio Allocation</a></li>
+                                </ul>
+                    </div>
+                </div>
+            </li>
+        <li><a class="drop" href="#"><div class="dropLong">My Fusion</div><div class="dropShort">Me</div></a><!-- Begin My Item -->
+            <div class="dropdown_4columns">
+                <div class="col_1">
+                    <h3>Blotters</h3>
+                        <ul>
+                            <li><a onclick="openPlaceOrderWindow('/fusion/FormHandler?Form=ClientSearch&amp;Action=reset&amp;placeOrder=true')" href="#"><img border="0/" src="/fusion/images/action_pad.png" /> Place Order</a></li>
+                                <li><a href="/fusion/FormHandler?Page=ConfirmedOrders&amp;Form=ReportOptions&amp;Action=reset">Orders</a></li>
+                                    <li><a href="/fusion/FormHandler?Page=FusionOrderBlotter">Fusion Orders</a></li>
+                            </ul>
+                    </div>
+                <div class="col_1">
+                    <h3>Adviser Group</h3>
+                    <ul>
+                        <li><a href="/fusion/FormHandler?Page=PortfolioTopClients&amp;Action=auto&amp;reloadTab=1">Clients</a></li>
+                        <li><a href="/fusion/FormHandler?Page=ClientAgeingReport&amp;Action=auto">Client Ageing</a></li>
+                        <li><a href="/fusion/FormHandler?Page=CorpActionReport&amp;Action=auto">CA Exposure</a></li>
+                        <li><a href="/fusion/FormHandler?Page=AdvisorMaturity">Maturity</a></li>
+                        <li><a href="/fusion/FormHandler?Page=AssetRecommendations&amp;Action=auto">Recommendations</a></li>
+                        <li><a href="/fusion/FormHandler?Page=AdvisorPortfolioException&amp;Action=auto">Portfolio Compliance</a></li>
+                        <li><a href="/fusion/FormHandler?Page=AdvisorPortfolioReturnsSummary&amp;reloadTab=1">Portfolio Returns</a></li>
+                        <li><a href="/fusion/FormHandler?Page=RevenueReport&amp;Form=ReportOptions&amp;Action=reset&amp;adviserGroupID">Revenue</a></li>
+                        <li><a href="/fusion/FormHandler?Page=GroupCorrespondence">Content</a></li>
+                        </ul>
+                </div>
+                <div class="col_1">
+                   <h3>demo</h3>
+                       <ul>
+                            <li><a href="/fusion/FormHandler?Page=UserCorrespondence">Documents</a></li>
+                            <li><a href="/fusion/FormHandler?Form=UserPrefs&amp;Action=reset">Preferences</a></li>
+                            </ul>
+                   </div>
+                <div class="col_1">
+                    <h3>My Stuff</h3>
+                            <ul>
+                            <li><a href="/fusion/FormHandler?Page=ComponentFrameExpand&amp;accountid=&amp;frame=3&amp;glt=4939">Client Advisory</a></li>
+                            </ul>
+                        </div>
+            </div>
+        </li>
+        <li class="drop"><a class="drop" href="#"><div class="dropLong">Murray &amp; Co</div><div class="dropShort">Us</div></a>
+                <div class="dropdown_2columns">
+                    <div class="col_1 forceRight">
+                        <h3>General</h3>
+                        <ul>
+                            <li><a href="/fusion/FormHandler?Page=AllInterestRates&amp;Form=FilterProducts&amp;Action=reset&amp;bu=ALL">Interest Rates</a></li>
+                                </ul>
+                    </div>
+
+                    <div class="col_1">
+                        <h3>External Sites</h3>
+                            <ul>
+                                <li><a href="/fusion/FormHandler?Page=Internet&amp;glt=3577">Intranet</a></li>
+                                        <li><a href="/fusion/FormHandler?Page=Internet&amp;glt=3578">JIRA</a></li>
+                                        </ul>
+                        </div>
+                </div>
+            </li>
+
+        <li class="drop"><a class="drop" href="#"><div class="dropLong">Market Data</div><div class="dropShort">Mkt</div></a>
+                <div class="dropdown_1column">
+                    <div class="col_1 forceRight">
+                        <ul>
+                            <li><a href="/fusion/FormHandler?Page=FXRates">FX Rates</a></li>
+                            <li><a href="/fusion/FormHandler?Page=CorpActionActivityReport">CA Activity</a></li>
+                            <li><a href="/fusion/FormHandler?Form=AssetSearch&amp;Action=reset&amp;bAssetExposureLink=false">Asset Information</a></li>
+                                <li><a class="MenuItem" onclick="openNewWindow('/fusion/FormHandler?Page=Indices','Indices','status=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=920')" href="#">Indices</a></li>
+                                <li><a class="MenuItem" onclick="openNewWindow('/fusion/FormHandler?Page=GoogleNews','News','status=yes,scrollbars=yes,resizable=yes,top=10,left=10,width=920')" href="#">News</a></li>
+                                </ul>
+                    </div>
+                </div>
+            </li>
+        <li class="menu_right"> <a href="/fusion/logout.jsp" id="logoff"><img border="0" title="Log Off" src="/fusion/skins/murray/images/Log-out.png" /></a></li>
+        <li class="menu_right"> <a onclick="refreshLink();" href="#"><img border="0" title="Refresh" src="/fusion/skins/murray/images/Update.png" /></a></li>
+        </ul>
+</div><div id="ContentWrapper">
+			<div id="TitleBar">
+					<div id="Title">Client Search</div>
+					<div id="LogOffRefresh">
+                        <a href="/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset&amp;redo=Y" id="lastSearchLinkInTitle">last search</a>
+                            </div>
+			</div>
+			<div id="Content"><table cellspacing="0" cellpadding="0" border="0" class="FilterTableNoTop"><tbody><tr><td>
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td colspan="4" class="LabelGroup">
+                    Enter Client Code to view a specific client</td>
+            </tr>
+            <tr>
+                <td width="75px" class="Label"><label for="clientid">Client Code</label></td>
+                <form onsubmit="searchPageClient(selectedDestination,gUps);return false;" id="ClientSearch" action="/fusion/FormHandler?Form=ClientSearch" method="POST" name="ClientSearch"></form><td width="250px" class="Data">
+                            <input type="text" class="InputTextM InputUpper" id="clientid" value="" name="clientid" /></td>
+                        <td width="270px" class="Label">
+                            <div id="QuickClientSelectLocation" class="dd-container" style="width: 260px;"><div class="dd-select" style="width: 260px; background: none repeat scroll 0% 0% transparent; border: medium none;"><input type="hidden" class="dd-selected-value" value="PV" /><a class="dd-selected"><img src="/fusion/images/Bookmark.png" class="dd-selected-image" /><label class="dd-selected-text">Portfolio Holdings</label><small class="dd-selected-description dd-desc dd-selected-description-truncated">View Portfolio Holdings</small></a><span class="dd-pointer dd-pointer-down"></span></div><ul class="dd-options dd-click-off-close" style="width: 260px;"><li><a class="dd-option"> <input type="hidden" value="DB" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Client Dashboard</label> <small class="dd-option-description dd-desc">View Client Dashboard</small></a></li><li><a class="dd-option"> <input type="hidden" value="CD" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Client Details</label> <small class="dd-option-description dd-desc">View Client Details</small></a></li><li><a class="dd-option"> <input type="hidden" value="EQ" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Equity Orders</label> <small class="dd-option-description dd-desc">View Equity Orders</small></a></li><li><a class="dd-option"> <input type="hidden" value="FI" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Fixed Interest Orders</label> <small class="dd-option-description dd-desc">View Fixed Interest Orders</small></a></li><li><a class="dd-option dd-option-selected"> <input type="hidden" value="PV" class="dd-option-value" /> <img src="/fusion/images/Bookmark.png" class="dd-option-image" /> <label class="dd-option-text">Portfolio Holdings</label> <small class="dd-option-description dd-desc">View Portfolio Holdings</small></a></li><li><a class="dd-option"> <input type="hidden" value="TV" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Portfolio Transactions</label> <small class="dd-option-description dd-desc">View Portfolio Transactions</small></a></li><li><a class="dd-option"> <input type="hidden" value="PA" class="dd-option-value" /> <img src="/fusion/images/File.png" class="dd-option-image" /> <label class="dd-option-text">Portfolio Allocation</label> <small class="dd-option-description dd-desc">View Portfolio Allocation</small></a></li></ul></div>
+                        </td>
+                        <td class="Label">
+                            <input type="button" onclick="searchPageClient(selectedDestination,'demo');" id="InputClientID" class="InputClientID" value="" name="toClientDetails" />
+                            <input type="hidden" value="valid" name="destination" />
+                        </td>
+                    <input type="hidden" value="clientid" name="ControlList" /></tr>
+        </tbody></table>
+    </td></tr></tbody></table>
+    <table cellspacing="0" cellpadding="0" border="0" class="FilterTableNoTop"><tbody><tr><td>
+        <table cellspacing="0" cellpadding="0" border="0">
+            <form onsubmit="clientSearchHook();return false;" autocomplete="off" action="/fusion/FormHandler?Form=ExtendedClientSearch" method="POST" name="ExtendedClientSearch"></form><tbody><tr>
+                    <td colspan="5" class="LabelGroup">Search for Clients <span id="SearchLabel"></span></td>
+                </tr>
+                <tr>
+                    <td class="Label"><label for="Name">Name</label></td>
+                    <td width="250px" class="Data"><input type="text" class="InputTextL" id="Name" value="" name="Name" /></td>
+                    <td width="270px" class="Label"><input type="radio" class="InputRadio" id="SearchOption1" value="1" name="SearchOption" /><label for="SearchOption1">Begins with</label> <input type="radio" checked="checked" class="InputRadio" id="SearchOption2" value="2" name="SearchOption" /><label for="SearchOption2">Contains</label></td>
+                    <td class="Label">
+                        <input type="button" onclick="reloadPage('/fusion/FormHandler?Page=ClientSearch&amp;Form=ClientSearch&amp;Action=reset');" alt="Reset" class="InputReset" value="" name="Reset" />
+                    </td>
+                    <td class="Label">
+                        <input type="submit" id="InputClientName" value="" name="search" />
+                        <input type="hidden" value="true" name="SearchExecuted" />
+                        </td>
+                </tr>
+                <tr>
+                    <td class="Label"><label for="LineOne">Address</label></td>
+                    <td class="Data"><input type="text" class="InputTextL ui-autocomplete-input" id="LineOne" value="" name="Address" autocomplete="off" /></td>
+                    <td colspan="3" class="Label">
+                        <input type="checkbox" class="InputCheck" onclick="setOneOffClient();" id="OneOff" value="1" name="OneOff" /><label for="OneOff">One Off Client</label>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="Label"><span id="PhoneLabelCell">Phone</span></td>
+                    <td class="Data"><input type="text" class="InputTextM" id="PhoneDataCell" value="" name="Phone" /></td>
+                    <td colspan="3" class="Label">
+                        <input type="checkbox" checked="checked" class="InputCheck" id="ExcludeSuspended" value="1" name="ExcludeSuspended" /><label id="ExcludeSuspendedLabel" for="ExcludeSuspended">Active Only</label>
+                    </td>
+                </tr>
+                <tr id="AdvisorLabelCell">
+                    <td class="Label">
+                        <span><label for="selectAdvisorGroup">Adviser Group</label></span>
+                    </td>
+                    <td class="Label">
+                        <select multiple="multiple" class="InputSelect" id="selectAdvisorGroup" name="AdvisorGroup" style="display: none;"><option selected="selected" value="10154">Andy's Adviser Group</option><option value="10379">Bobs Adviser Group</option><option value="10545">Demo Adviser Group</option><option value="10155">Greg Bartlett</option><option value="10452">X-Men</option></select><button type="button" class="ui-multiselect ui-widget ui-state-default ui-corner-all" aria-haspopup="true" tabindex="0" style="width: 225px;"><span class="ui-icon ui-icon-triangle-2-n-s"></span><span>1 of 5 selected</span></button></td>
+                    <td colspan="3" class="Label">
+                        <input type="checkbox" class="InputCheck" id="AllClients" value="1" name="AllClients" /><label id="AllClientsLabel" for="AllClients">All Clients (overrides Adviser Group selection)</label>
+                    </td>
+                </tr>
+
+            <input type="hidden" value="Name,SearchOption,Address,OneOff,Phone,ExcludeSuspended,AdvisorGroup,AllClients" name="ControlList" /></tbody></table>
+    </td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="display:none;" id="ClientSearchResultsHeader">
+    <tbody><tr>
+        <td class="HeadingSection">Search Results</td>
+    </tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="display:none;" id="ClientSearchResultsSizeLimitHeader">
+    <tbody><tr>
+        <td class="HeadingSection">Search Results
+            <span style="color: red; ">
+                (limited to 150.
+                Refine your search if required.)
+            </span>
+        </td>
+    </tr>
+</tbody></table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="display:none;" id="ClientSearchResultsHeaderWarning">
+    <tbody><tr>
+        <td class="HeadingSection">The first 100 matches have been returned</td>
+    </tr>
+</tbody></table>
+<span style="display:none;" id="ClientSearchResults">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%" id="CSRTable" class="sortable">
+        <thead>
+            <tr>
+                <td nowrap="nowrap" class="LabelDataSetCol"><a href="#" class="LinkView" columnid="0" title="Click to sort">Client Code</a><span class="tableSortArrow">  </span></td>
+                <td nowrap="nowrap" id="TypeLabelID" class="LabelDataSetCol"><a href="#" class="LinkView" columnid="1" title="Click to sort">Type</a><span class="tableSortArrow">  </span></td>
+                <td nowrap="nowrap" class="LabelDataSetCol skipsort"><span id="OrderLabelID">Order ID</span></td>
+                <td nowrap="nowrap" class="LabelDataSetCol"><a href="#" class="LinkView" columnid="3" title="Click to sort">Name</a><span class="tableSortArrow">  </span></td>
+                <td nowrap="nowrap" id="AddressLabelID" class="LabelDataSetCol"><a href="#" class="LinkView" columnid="4" title="Click to sort">Address</a><span class="tableSortArrow">  </span></td>
+                <td nowrap="nowrap" id="StatusLabelID" class="LabelDataSetCol"><a href="#" class="LinkView" columnid="5" title="Click to sort">Status</a><span class="tableSortArrow">  </span></td>
+            </tr>
+        </thead>
+        <tbody id="keyclientsbody">
+            <tr>
+                <td class="DataSet">A</td>
+                <td class="DataSet">B</td>
+                <td class="DataSet">123</td>
+                <td class="DataSet">C</td>
+                <td class="DataSet">D</td>
+                <td class="DataSet">S</td>
+            </tr>
+        </tbody>
+    </table>
+</span>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="display:none;" id="ClientSearchResultsEmpty">
+    <tbody><tr>
+        <td class="MsgInfo">Your Search returned no results, please refine your search criteria and try again.</td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tbody><tr><td class="MsgError" id="errorMessage"></td></tr>
+                </tbody></table>
+			</div> </div> </div> <div id="PageLoaded"></div><script type="text/javascript">hideLoadMsg();</script>
+
+<iframe style="display: none" src="http://chm-demo-alfr.chelmer.co.nz:8080/share" id="shear"></iframe>
+    <script>
+                var adviserGroups = "";
+                
+                    adviserGroups = adviserGroups + "Bobs Adviser Group, ";
+                
+                    adviserGroups = adviserGroups + "Demo Adviser Group, ";
+                
+                    adviserGroups = adviserGroups + "X-Men, ";
+                
+                    adviserGroups = adviserGroups + "Greg Bartlett, ";
+                
+                    adviserGroups = adviserGroups + "Andy\u0027s Adviser Group, ";
+                
+                if ( adviserGroups != "" ) adviserGroups = adviserGroups.substring(0, adviserGroups.length - 2);
+
+                window.intercomSettings = {
+                    name: "demo",
+                    user_id: "demo",
+                    email: "testing\u0040chelmer.co.nz",
+                    created_at: 1388516400,
+                    widget: {"activator": "#Intercom"},
+                    "Adviser Groups" : adviserGroups,
+                    company: {
+                        id: 'murray',
+                        name: 'Murray &amp;#38; Co'
+                    },
+                    app_id: "zlpfjt1a"
+                };
+            </script>
+            <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ne6d9ebt';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+        
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"3069079","applicationTime":362,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"389c1a30f6","transactionName":"MlFRMUpRCEoAVk1fVwsbUApVHghcFkdcWlEGGlICXV4SFzVneHhrJHdnLHd+OXcgeHwZfhBHWgpWHyVVCFBXQmsAVUEGUA==","agent":"js-agent.newrelic.com\/nr-632.min.js","errorBeacon":"bam.nr-data.net"}</script>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front no-close ui-dialog-buttons ui-draggable ui-resizable" style="display: none; position: absolute;" tabindex="-1" role="dialog" aria-describedby="sessionExpiryDialog" aria-labelledby="ui-id-1"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Fusion</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="sessionExpiryDialog" class="ui-dialog-content ui-widget-content"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Login</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="display: none; position: absolute;" tabindex="-1" role="dialog" aria-describedby="clientDetailOnly" aria-labelledby="ui-id-2"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-2" class="ui-dialog-title">Client Details</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="clientDetailOnly" class="ui-dialog-content ui-widget-content"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Close</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="display: none; position: absolute;" tabindex="-1" role="dialog" aria-describedby="extRefDetail" aria-labelledby="ui-id-3"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-3" class="ui-dialog-title">External Reference Details</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="extRefDetail" class="ui-dialog-content ui-widget-content"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Apply</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Close</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable" style="display: none;" tabindex="-1" role="dialog" aria-describedby="extRefDetailConfirm" aria-labelledby="ui-id-4"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-4" class="ui-dialog-title"></span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div style="" id="extRefDetailConfirm" class="ui-dialog-content ui-widget-content">
+    <p><span style="float: left; margin: 0 7px 20px 0;" class="ui-icon ui-icon-alert"></span>This External Reference will be permanently deleted and cannot be recovered. Are you sure?</p>
+    <p><span id="dialog-remove-error" class="MsgError"></span></p>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Remove</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="display: none; position: absolute;" tabindex="-1" role="dialog" aria-describedby="linkedDocumentDetail" aria-labelledby="ui-id-5"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-5" class="ui-dialog-title">Linked Document Details</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="linkedDocumentDetail" class="ui-dialog-content ui-widget-content"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Apply</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable" style="display: none;" tabindex="-1" role="dialog" aria-describedby="linkedDocumentDetailConfirm" aria-labelledby="ui-id-6"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-6" class="ui-dialog-title"></span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div style="" id="linkedDocumentDetailConfirm" class="ui-dialog-content ui-widget-content">
+    <p><span style="float: left; margin: 0 7px 20px 0;" class="ui-icon ui-icon-alert"></span>This Link will be removed, no actual document will be deleted. Are you sure?</p>
+    <p><span id="dialog-link-error" class="MsgError"></span></p>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Remove</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel</span></button></div></div></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-7" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><div class="ui-multiselect-menu ui-widget ui-widget-content ui-corner-all" style="width: 217px;"><div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix"><ul class="ui-helper-reset"><li><a href="#" class="ui-multiselect-all"><span class="ui-icon ui-icon-check"></span><span>Check all</span></a></li><li><a href="#" class="ui-multiselect-none"><span class="ui-icon ui-icon-closethick"></span><span>Uncheck all</span></a></li><li class="ui-multiselect-close"><a class="ui-multiselect-close" href="#"><span class="ui-icon ui-icon-circle-close"></span></a></li></ul></div><ul class="ui-multiselect-checkboxes ui-helper-reset"><li class=" "><label class="ui-corner-all" title="" for="ui-multiselect-selectAdvisorGroup-option-0"><input type="checkbox" aria-selected="true" checked="checked" title="Andy's Adviser Group" value="10154" name="multiselect_selectAdvisorGroup" id="ui-multiselect-selectAdvisorGroup-option-0" /><span>Andy's Adviser Group</span></label></li><li class=" "><label class="ui-corner-all" title="" for="ui-multiselect-selectAdvisorGroup-option-1"><input type="checkbox" title="Bobs Adviser Group" value="10379" name="multiselect_selectAdvisorGroup" id="ui-multiselect-selectAdvisorGroup-option-1" /><span>Bobs Adviser Group</span></label></li><li class=" "><label class="ui-corner-all" title="" for="ui-multiselect-selectAdvisorGroup-option-2"><input type="checkbox" title="Demo Adviser Group" value="10545" name="multiselect_selectAdvisorGroup" id="ui-multiselect-selectAdvisorGroup-option-2" /><span>Demo Adviser Group</span></label></li><li class=" "><label class="ui-corner-all" title="" for="ui-multiselect-selectAdvisorGroup-option-3"><input type="checkbox" title="Greg Bartlett" value="10155" name="multiselect_selectAdvisorGroup" id="ui-multiselect-selectAdvisorGroup-option-3" /><span>Greg Bartlett</span></label></li><li class=" "><label class="ui-corner-all" title="" for="ui-multiselect-selectAdvisorGroup-option-4"><input type="checkbox" title="X-Men" value="10452" name="multiselect_selectAdvisorGroup" id="ui-multiselect-selectAdvisorGroup-option-4" /><span>X-Men</span></label></li></ul></div></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1352" height="672"></canvas></html>

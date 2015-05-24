@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance" tests="13" assertions="7" failures="4" errors="1" time="253.669165">
+    <testcase name="FusionClientRelationships" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionClientRelationshipsCept.php" feature="perform actions and see result" assertions="1" time="33.837723">
+      <error type="PHPUnit_Framework_ExceptionWrapper">perform actions and see result (FusionClientRelationshipsCept)
+ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:02:37'
+System info: host: 'Kanav', ip: '10.66.4.132', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
+Driver info: driver.version: unknown
+
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\AcceptanceTester.php:459
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\_steps\MemberSteps.php:59
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionClientRelationshipsCept.php:9
+C:\Users\OEM\Documents\chelmer-app-automation\codecept.phar:7
+</error>
+    </testcase>
+    <testcase name="FusionHoldings" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionHoldingsCept.php" feature="" assertions="2" time="80.029325"/>
+    <testcase name="FusionPlaceOrders" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionPlaceOrdersCept.php" feature="perform actions and see result" assertions="1" time="18.278012">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">perform actions and see result (FusionPlaceOrdersCept)
+Failed asserting that an array is not empty.
+
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\AcceptanceTester.php:1487
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\_steps\MemberSteps.php:140
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionPlaceOrdersCept.php:8
+C:\Users\OEM\Documents\chelmer-app-automation\codecept.phar:7
+</failure>
+    </testcase>
+    <testcase name="FusionPortfolioAllocation" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionPortfolioAllocationCept.php" feature="perform actions and see result" assertions="0" time="15.735652">
+      <failure type="Codeception\Exception\ElementNotFound">perform actions and see result (FusionPortfolioAllocationCept)
+Link or Button or CSS or XPath '/html/body/div[3]/div[2]/ul/li[5]/div/div[2]/ul/li[2]/a' was not found on page.
+
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\AcceptanceTester.php:459
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionPortfolioAllocationCept.php:10
+C:\Users\OEM\Documents\chelmer-app-automation\codecept.phar:7
+</failure>
+    </testcase>
+    <testcase name="FusionSearch" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionSearchCept.php" feature="perform actions and see result" assertions="0" time="12.301195"/>
+    <testcase name="FusionTransaction" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionTransactionCept.php" feature="perform actions and see result" assertions="0" time="0.090873"/>
+    <testcase name="FusionViewOrders" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionViewOrdersCept.php" feature="perform actions and see result" assertions="1" time="24.870448">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">perform actions and see result (FusionViewOrdersCept)
+Failed asserting that   &lt;bold&gt;/fusion/FormHandler?Page=HoldingsTransactions&amp;AID=1599&amp;accountid=100021&lt;/bold&gt;
+--&gt; &lt;info&gt;  Feedback &amp; Help
+      My Fusion
+Client
+Portfolio
+Accounts
+Orders
+Murray &amp; Co
+Market Data
+Transactions for Premium Custody client: 100021 - Mr Andrew John Frederick Robertson | Portfolio: 100021 - Managed Custody - A Robertson Trust Managed Portfolio
+aggregate portfolios | last search
+Select a Busi&lt;/info&gt;
+&lt;debug&gt;[Content too long to display. See complete response in '_output' directory]&lt;/debug&gt;
+--&gt; contains "confirmed orders".
+
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\AcceptanceTester.php:315
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\_steps\MemberSteps.php:125
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\FusionViewOrdersCept.php:11
+C:\Users\OEM\Documents\chelmer-app-automation\codecept.phar:7
+</failure>
+    </testcase>
+    <testcase name="LoginFusion" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\LoginFusionCept.php" feature="" assertions="0" time="7.972814"/>
+    <testcase name="WebServiceHoldings" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\WebServiceHoldingsCept.php" feature="perform actions and see result" assertions="0" time="0.982919"/>
+    <testcase name="WorkspaceHoldings" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\WorkspaceHoldingsCept.php" feature="" assertions="0" time="0.274466">
+      <system-out>&#13;
+</system-out>
+    </testcase>
+    <testcase name="compareTotal" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\compareTotalCept.php" feature="" assertions="2" time="39.828499">
+      <failure type="Codeception\Exception\ElementNotFound"> (compareTotalCept)
+Link or Button or CSS or XPath '/html/body/div[3]/div[2]/ul/li[5]/div/div[2]/ul/li[2]/a' was not found on page.
+
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\AcceptanceTester.php:459
+C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\compareTotalCept.php:15
+C:\Users\OEM\Documents\chelmer-app-automation\codecept.phar:7
+</failure>
+    </testcase>
+    <testcase name="fusionCreateTransaction" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\fusionCreateTransactionCept.php" feature="" assertions="0" time="9.920679"/>
+    <testcase name="loginFaliure" file="C:\Users\OEM\Documents\chelmer-app-automation\tests\acceptance\loginFaliureCept.php" feature="perform actions and see result" assertions="0" time="9.546560"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,1094 @@
+<html>
+  <head>
+    <title>
+      Test results
+    </title>
+    <meta charset='utf-8'>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round&amp;v2' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+             .layout {
+                 margin: 0 auto;
+                 width: 960px;
+
+                 }
+                 body { font-family: arial, serif; margin: 0; padding: 0; background: #333; }
+                 h1,h2,h3 { font-family: arial, serif; color: white; }
+                 h1 { font-size: 2.5em; }
+                 h2 { font-size: 1.3em; }
+         h3 { font-size: 1em; color: #84BBDD; margin: 0.5em 0; }
+
+                 table { border: none; margin: 0; padding: 0; }
+                 .scenarioStepsTable .stepName { padding: 5px; }
+
+                 .scenarioStepsTable td {
+                 font-size: 80%;
+                 border: 1px solid #ccc;
+                 font-family: 'Varela Round', arial;
+                 -webkit-border-radius: 5px;
+                 -moz-border-radius: 5px;
+                 border-radius: 5px;
+                 background: rgb(255,255,255); /* Old browsers */
+                 background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera11.10+ */
+                 background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+                 background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+
+                 }
+
+                 p {
+                    cursor: pointer;
+                 padding: 5px;
+
+                 -webkit-border-radius: 5px;
+                 -moz-border-radius: 5px;
+                 border-radius: 5px;
+
+                 }
+
+                 .header { font-size: large; font-weight: bold; }
+                 p.scenarioSuccess {
+                 background: rgb(157,213,58); /* Old browsers */
+                 background: -moz-linear-gradient(top, rgba(157,213,58,1) 0%, rgba(161,213,79,1) 50%, rgba(124,188,10,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,213,58,1)), color-stop(50%,rgba(161,213,79,1)), color-stop(100%,rgba(124,188,10,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top, rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(124,188,10,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top, rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(124,188,10,1) 100%); /* Opera11.10+ */
+                 background: -ms-linear-gradient(top, rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(124,188,10,1) 100%); /* IE10+ */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+                 background: linear-gradient(top, rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(124,188,10,1) 100%); /* W3C */
+
+                 }
+
+
+                 .scenario { color: black; }
+                 p.scenarioFailed { color: black;
+                 background: rgb(204,0,0); /* Old browsers */
+                 background: -moz-linear-gradient(top, rgba(204,0,0,1) 0%, rgba(119,0,0,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,0,0,1)), color-stop(100%,rgba(119,0,0,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(119,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(119,0,0,1) 100%); /* Opera11.10+ */
+                 background: -ms-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(119,0,0,1) 100%); /* IE10+ */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#770000',GradientType=0 ); /* IE6-9 */
+                 background: linear-gradient(top, rgba(204,0,0,1) 0%,rgba(119,0,0,1) 100%); /* W3C */
+                 }
+
+
+                 table.scenarioFailed tr:last-child { font-weight: bold; color: red }
+
+                 td.scenarioSuccess { color: green }
+                 td.scenarioFailed { color: red }
+                 .scenarioSkipped { color: teal; }
+                 .scenarioIncomplete { color: gray; }
+                 .scenarioStepsTable { margin-left: 10px; display: none; color: #333; }
+
+                 #stepContainerSummary {
+                 background: white;
+                 -webkit-border-radius: 5px;
+                 -moz-border-radius: 5px;
+                 border-radius: 5px;
+                 padding: 20px;
+                 }
+                 ul#toolbar-filter {
+                        display: inline;
+                 }
+                 ul#toolbar-filter li {
+                        display: inline;
+                  float: right;
+                        padding: 20px;
+                        width: 120px;
+                        color: black;
+                        background-color: #9DD53A;
+                 }
+                 ul#toolbar-filter li.disabled {
+                        background-color: gray;
+                 }
+                 ul#toolbar-filter li:hover {
+                        background-color: white;
+                 }
+                 ul#toolbar-filter li.disabled:hover {
+                        background-color: #333;
+                 }
+    </style>
+    <script type="text/javascript">
+function showHide(nodeId, linkObj)
+    {
+    var subObj = document.getElementById('stepContainer' + nodeId);
+
+    if (linkObj.innerHTML.indexOf('+')>0) {
+      linkObj.innerHTML = linkObj.innerHTML.replace('+','-');
+      subObj.style.display='block';
+      subObj.style.width = '100%';
+    } else {
+      linkObj.innerHTML = linkObj.innerHTML.replace('-','+');
+      subObj.style.display='none';
+    }
+    }
+
+    function showAllScenarios() {
+    var toolbar = document.getElementById('toolbar-filter');
+    for (var i = 0; i < toolbar.children.length; i++) {
+      toolbar.children[i].className = '';
+    }
+
+    var trs = document.getElementsByTagName('tr');
+    for(var z = 0; z < trs.length; z++) {
+      trs[z].style.display = '';
+    }
+    }
+
+    function toogleScenarios(name, linkObj) {
+    if (linkObj.className == '') {
+      document.getElementById('toolbar-filter').children[0].className = 'disabled';
+      linkObj.className = 'disabled';
+    } else {
+      var toolbar = document.getElementById('toolbar-filter');
+      toolbar.children[0].className = '';
+      linkObj.className = '';
+      for (var i = 1; i < toolbar.children.length; i++) {
+        if (toolbar.children[i].classList.contains('disabled')) {
+           showAll = false;
+           toolbar.children[0].className = 'disabled';
+        }
+      }
+    }
+
+    var rows = document.getElementsByClassName('scenarioRow');
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i];
+      if (row.classList.contains(name)) {
+        if (row.style.display == '') {
+          row.style.display = 'none';
+        } else {
+          row.style.display = '';
+        }
+      }
+    }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="layout">
+      <h1>
+        Codeception Results <small><span style="color: red">FAILED</span> (253.7s)</small>
+      </h1>
+      <ul id="toolbar-filter">
+        <li onclick="showAllScenarios()">Show all
+        </li>
+        <li onclick="toogleScenarios('scenarioSuccess', this)">Success (8)
+        </li>
+        <li onclick="toogleScenarios('scenarioFailed', this)">Failed (5)
+        </li>
+        <li onclick="toogleScenarios('scenarioSkipped', this)">Skipped (0)
+        </li>
+        <li onclick="toogleScenarios('scenarioIncomplete', this)">Incomplete (0)
+        </li>
+      </ul>
+      <table border="0" style="width: 100%;">
+        <tr>
+          <td>
+            <h3>
+              Acceptance Tests
+            </h3>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('1', this)">
+              [+] perform actions and see result (FusionClientRelationshipsCept) (33.84s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"Portfolio Holdings"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">".//*[@id='megamenu']/ul/li[4]/a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"Relationships"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('2', this)">
+              [+] (FusionHoldingsCept) (80.03s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"Portfolio Holdings"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldigs_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[1]/tbody/tr/td/div/form/table/tbody/tr/td/div[2]/table/tbody/tr/td[2]/span/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[1]/tbody/tr/td/div/form/table/tbody/tr/td/div[2]/table/tbody/tr/td[2]/span/div/div/table/tbody/tr[2]/td[3]/a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldigs_AUD_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see element <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[2]/tbody/tr[6]/td[8]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[1]/tbody/tr/td/div/form/table/tbody/tr/td/div[2]/table/tbody/tr/td[4]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"Done"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldigs_Date_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I select option <span style="color: #732E81;">"selectGroupBy","NZ Tax Reporting"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[1]/tbody/tr/td/div/form/table/tbody/tr/td/div[2]/table/tbody/tr/td[12]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldigs_Group_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I select option <span style="color: #732E81;">"selectSortBy","Maturity Date Desc"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[1]/tbody/tr/td/div/form/table/tbody/tr/td/div[2]/table/tbody/tr/td[12]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldigs_Sort_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[3]/div[2]/table[2]/tbody/tr[7]/td[4]/a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('3', this)">
+              [+] perform actions and see result (FusionPlaceOrdersCept) (18.28s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[7]/a/div[1]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[7]/div/div/ul/li/a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see element <span style="color: #732E81;">"/html/body/div[4]/div[3]/div[1]/div[1]"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('4', this)">
+              [+] perform actions and see result (FusionPortfolioAllocationCept) (15.74s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/a/div[1]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/div/div[2]/ul/li[2]/a"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('5', this)">
+              [+] perform actions and see result (FusionSearchCept) (12.3s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('6', this)">
+              [+] perform actions and see result (FusionTransactionCept) (0.09s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer6"></table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('7', this)">
+              [+] perform actions and see result (FusionViewOrdersCept) (24.87s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer7">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[7]/a/div[1]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[7]/div/div/ul/li/a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"Confirmed Orders"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('8', this)">
+              [+] (LoginFusionCept) (7.97s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer8">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('9', this)">
+              [+] perform actions and see result (WebServiceHoldingsCept) (0.98s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer9"></table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('10', this)">
+              [+] (WorkspaceHoldingsCept) (0.27s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer10">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('11', this)">
+              [+] (compareTotalCept) (39.83s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer11">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">2</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"Portfolio Holdings"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I grab text from <span style="color: #732E81;">".//*[@id='Holdings']/tbody/tr[112]/td[9]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"806,887.90"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"FusionHoldings_page"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/a/div[1]"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/div/div[2]/ul/li[2]/a"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('12', this)">
+              [+] (fusionCreateTransactionCept) (9.92s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer12">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input",30</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","demo"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","Welcome01!"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">5</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/input","100021"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div[3]/div[2]/ul/li[5]/img"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('13', this)">
+              [+] perform actions and see result (loginFaliureCept) (9.55s)
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer13">
+              <tr>
+                <td class="stepName">
+                  I resize window <span style="color: #732E81;">1366,768</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken1","xyz"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I fill field <span style="color: #732E81;">"#IDToken2","xyz"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"/html/body/div/div[2]/div[2]/div/form/fieldset/div/input"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"html body div.container_12 div.box.clear-float div.grid_9.left-seperator div.box-content.clear-float form fieldset div.row input.button.primary"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait <span style="color: #732E81;">3</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I make screenshot <span style="color: #732E81;">"Fusion_login_faliure"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>
+              Summary
+            </h2>
+            <div id="stepContainerSummary">
+              <table border="0">
+                <tr>
+                  <td width="250" class="scenarioSuccess">
+                    Successful scenarios:
+                  </td>
+                  <td class="scenarioSuccessValue">
+                    <strong>8</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="scenarioFailed">
+                    Failed scenarios:
+                  </td>
+                  <td class="scenarioFailedValue">
+                    <strong>5</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="scenarioSkipped">
+                    Skipped scenarios:
+                  </td>
+                  <td class="scenarioSkippedValue">
+                    <strong>0</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="scenarioIncomplete">
+                    Incomplete scenarios:
+                  </td>
+                  <td class="scenarioIncompleteValue">
+                    <strong>0</strong>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

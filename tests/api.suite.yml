@@ -1,0 +1,8 @@
+class_name: ApiTester
+modules:
+      enabled: [PhpBrowser, REST, ApiHelper]
+      config:
+            PhpBrowser:
+                  url: https://ws-aas.web-apps.co.nz
+            REST:
+                  url: http://ws-aas.web-apps.co.nz/api/v1

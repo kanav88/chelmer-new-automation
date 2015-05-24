@@ -1,0 +1,25 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: false
+    memory_limit: 1024M
+modules:
+    config:
+        Db:
+            dsn: ''
+            user: ''
+            password: ''
+            dump: tests/_data/dump.sql
+
+exclude:
+       - tests/acceptance/FusionPlaceOrdersCept.php
+
+groups:
+  # add 2 tests to murray investments group
+  murray_and_Co: [tests/acceptance/FusionSearchCept.php, tests/acceptance/LoginFusionCept.php]
+  group1: [tests/ws_acceptance/Asset_Register_Maintenance/Create_AssetCept.php, tests/ws_acceptance/Asset_Register_Maintenance/Create_IssuerCept.php, tests/ws_acceptance/Auditing/Audit_Ace_ClientCept.php]  

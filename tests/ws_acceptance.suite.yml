@@ -1,0 +1,9 @@
+class_name: Ws_acceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - AcceptanceHelper
+    config:
+        WebDriver:
+            url: 'http://chm-QA30-cps.chelmer.co.nz:8080/ws'
+            browser: 'firefox'
